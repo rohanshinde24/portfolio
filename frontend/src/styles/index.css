@@ -1,0 +1,63 @@
+/* src/styles/index.css */
+
+/* Tailwind base, components, utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global resets & base styles */
+body {
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Add Tailwind background and text color for a dark theme */
+  @apply bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-800 text-white;
+}
+/* body {
+  @apply bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-800 text-white;
+} */
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: white; /* or neutral-900 for dark mode */
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+  @apply bg-background-light text-text-light;
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+  font-family: 'Inter', sans-serif;
+}
+
+.dark html {
+  @apply bg-background-dark text-text-dark;
+}
+body {
+  overflow-y: scroll; /* still allow scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* Chrome, Safari, Opera */
+}
+body.modal-open {
+  overflow: hidden;
+}
