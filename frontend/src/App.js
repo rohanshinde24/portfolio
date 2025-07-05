@@ -20,8 +20,8 @@ function MainLayout() {
     <>
       <ScrollProgressBar />
       <Navbar />
-      <div className="min-h-screen w-full bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-800 text-white">
-        <main>
+      <div className="min-h-screen w-full bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-800 text-white overflow-x-hidden">
+        <main className="w-full">
           <AnimatedSection id="home">
             <Home />
           </AnimatedSection>

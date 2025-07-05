@@ -36,6 +36,8 @@ body {
   scroll-behavior: smooth;
   background-color: white; /* or neutral-900 for dark mode */
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
 html {
   scroll-behavior: smooth;
@@ -60,4 +62,64 @@ body::-webkit-scrollbar {
 }
 body.modal-open {
   overflow: hidden;
+}
+
+/* Ensure sections are properly visible on mobile */
+section {
+  width: 100%;
+  min-height: auto;
+}
+
+/* Improve mobile touch targets */
+@media (max-width: 640px) {
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Improve touch handling */
+  button,
+  a,
+  [role='button'] {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Ensure proper viewport handling */
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Improve modal handling */
+  .fixed {
+    position: fixed !important;
+  }
+
+  /* Better z-index management */
+  .z-50 {
+    z-index: 50 !important;
+  }
+
+  .z-40 {
+    z-index: 40 !important;
+  }
+}
+
+/* Resume viewer specific styles */
+.resume-viewer {
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Prevent text selection on buttons */
+button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

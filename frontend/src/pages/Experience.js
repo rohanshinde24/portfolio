@@ -161,20 +161,19 @@ import { experienceData } from '../data/experience';
 
 export default function Experience() {
   return (
-    <div className="pt-20 pb-28">
+    <div className="w-full py-8 sm:py-12 px-4 sm:px-6 bg-white dark:bg-neutral-900">
       <h2
         id="experience-heading"
-        className="text-4xl font-extrabold mb-16 text-primary-light dark:text-primary-dark drop-shadow-lg text-center"
+        className="text-3xl sm:text-4xl font-extrabold mb-12 sm:mb-16 text-primary-light dark:text-primary-dark drop-shadow-lg text-center"
       >
         Experience
       </h2>
 
-      <div className="relative border-l-2 border-accent-light dark:border-accent-dark max-w-4xl mx-auto pl-6">
-        {/* parent motion.div drives the stagger */}
+      <div className="relative border-l-2 border-accent-light dark:border-accent-dark max-w-4xl mx-auto pl-4 sm:pl-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={{
             hidden: {},
             visible: { transition: { staggerChildren: 0.12 } },
@@ -187,44 +186,48 @@ export default function Experience() {
             ) => (
               <motion.div
                 key={company}
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.6, delay: idx * 0.3 }}
-                className="mb-14 relative"
+                variants={{
+                  hidden: { opacity: 0, x: 20 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                className="mb-12 sm:mb-16 relative"
               >
                 {/* Timeline dot */}
                 <span className="absolute -left-[0.43rem] top-2 w-3 h-3 bg-accent-light dark:bg-accent-dark rounded-full shadow-md" />
 
-                <div className="bg-white dark:bg-neutral-900 p-6 rounded-lg shadow-md">
+                <div className="bg-white dark:bg-neutral-900 p-6 sm:p-8 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
                   {logo && (
                     <img
                       src={logo}
                       alt={`${company} logo`}
-                      className="w-10 h-10 mb-4 object-contain"
+                      className="w-10 h-10 sm:w-12 sm:h-12 mb-4 sm:mb-6 object-contain"
                     />
                   )}
 
-                  <h3 className="text-left text-2xl font-semibold mb-1 text-primary-light dark:text-primary-dark">
+                  <h3 className="text-left text-xl sm:text-2xl md:text-3xl font-semibold mb-2 sm:mb-3 text-primary-light dark:text-primary-dark">
                     {role}
                   </h3>
-                  <div className="flex flex-col sm:flex-row sm:justify-between items-start mb-1 space-y-1 sm:space-y-0">
-                    <span className="text-accent-light dark:text-accent-dark text-sm sm:text-base">
+
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 sm:mb-3 space-y-1 sm:space-y-0">
+                    <span className="text-accent-light dark:text-accent-dark text-sm sm:text-base font-medium">
                       {type}
                     </span>
-                    <span className="text-primary-light dark:text-secondary-dark font-medium text-sm sm:text-base text-left sm:text-right">
+                    <span className="text-primary-light dark:text-secondary-dark font-semibold text-sm sm:text-base text-left sm:text-right">
                       {company}
                     </span>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row sm:justify-between italic text-sm text-gray-600 dark:text-gray-400 mb-3 space-y-1 sm:space-y-0">
+                  <div className="flex flex-col sm:flex-row sm:justify-between italic text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-4 sm:mb-6 space-y-1 sm:space-y-0">
                     <p className="text-left">{location}</p>
                     <p className="text-left sm:text-right">{period}</p>
                   </div>
 
-                  <ul className="text-left list-disc list-outside space-y-2 pl-5 text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <ul className="text-left list-disc list-outside space-y-2 sm:space-y-3 pl-5 sm:pl-6 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                     {highlights.map((point, i) => (
-                      <li key={i}>{point}</li>
+                      <li key={i} className="mb-2">
+                        {point}
+                      </li>
                     ))}
                   </ul>
                 </div>
