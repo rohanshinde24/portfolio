@@ -63,9 +63,67 @@ export default function ResumeViewer() {
     }
   };
 
-  // On mobile, nothing is rendered (handled by useEffect)
-  if (isMobile) return null;
+  if (isMobile) {
+    return (
+      <div className="resume-viewer">
+        <AnimatePresence>
+          <motion.div
+            key="backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.8 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm"
+            onClick={handleBackdropClick}
+          />
+          <motion.div
+            key="resume-mobile"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 40 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center px-4 py-6"
+          >
+            <button
+              onClick={handleClose}
+              className="absolute top-4 right-4 text-3xl text-red-500 hover:text-red-600 z-50 p-2 bg-white/10 backdrop-blur rounded-full transition-colors"
+              aria-label="Close Resume"
+              style={{ WebkitTapHighlightColor: 'transparent' }}
+            >
+              <IoClose />
+            </button>
+            <div className="w-full max-w-md bg-white dark:bg-neutral-900 rounded-lg shadow-lg p-8 flex flex-col items-center">
+              <h2 className="text-xl font-bold mb-6 text-primary-light dark:text-primary-dark text-center">
+                Download Resume
+              </h2>
+              <a
+                href="/resume.pdf"
+                download
+                className="w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-base mb-2"
+                style={{ WebkitTapHighlightColor: 'transparent' }}
+              >
+                Download PDF
+              </a>
+              <span className="text-gray-500 dark:text-gray-400 text-xs mt-2 text-center">
+                If the download doesn't start,{' '}
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                >
+                  open in new tab
+                </a>
+                .
+              </span>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    );
+  }
 
+  // Desktop behavior
   return (
     <div className="resume-viewer">
       <AnimatePresence>
