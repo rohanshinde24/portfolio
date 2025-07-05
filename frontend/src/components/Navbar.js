@@ -15,6 +15,13 @@ const navItems = [
   { id: 'contact', label: 'Contact' },
 ];
 
+function isMobileDevice() {
+  if (typeof navigator === 'undefined') return false;
+  return /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+}
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -33,11 +40,12 @@ export default function Navbar() {
   const handleResumeClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
-
-    console.log('Resume button clicked');
+    if (isMobileDevice()) {
+      window.open('/resume.pdf', '_blank');
+      closeMenu();
+      return;
+    }
     closeMenu();
-
-    // Add a small delay to ensure the menu is closed before navigation
     setTimeout(() => {
       navigate('/resume', { state: { from: window.location.pathname } });
     }, 100);
