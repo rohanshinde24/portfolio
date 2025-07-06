@@ -40,7 +40,7 @@ export default function Footer() {
         </button>
 
         {/* Social Icons */}
-        <div className="flex gap-6 text-xl text-gray-700 dark:text-gray-300">
+        <div className="flex justify-center items-center gap-6 text-xl text-gray-700 dark:text-gray-300 mx-auto">
           <a
             href="mailto:rohanshi@usc.edu"
             aria-label="Email"

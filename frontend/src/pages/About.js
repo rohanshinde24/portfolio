@@ -99,7 +99,7 @@ export default function About() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
       >
-        <h3 className="text-3xl font-semibold mb-8 sm:mb-12 border-b pb-3 text-accent-light dark:text-accent-dark drop-shadow-sm">
+        <h3 className="text-3xl font-semibold mb-8 sm:mb-12 border-b pb-3 text-accent-light dark:text-accent-dark drop-shadow-sm text-center">
           Education
         </h3>
 
