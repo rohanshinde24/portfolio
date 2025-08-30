@@ -2,7 +2,14 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaLayerGroup, FaTools, FaDatabase } from 'react-icons/fa';
+import {
+  FaCode,
+  FaLayerGroup,
+  FaTools,
+  FaDatabase,
+  FaServer,
+  FaBrain,
+} from 'react-icons/fa';
 import SectionWrapper from './SectionWrapper';
 
 const SKILL_CATEGORIES = [
@@ -10,7 +17,15 @@ const SKILL_CATEGORIES = [
     id: 'languages',
     name: 'Languages',
     icon: <FaCode />,
-    skills: ['Python', 'JavaScript', 'TypeScript', 'Swift', 'SQL'],
+    skills: [
+      'Python',
+      'JavaScript',
+      'TypeScript',
+      'Swift',
+      'SQL',
+      'Java',
+      'HTML/CSS',
+    ],
   },
   {
     id: 'frameworks',
@@ -24,37 +39,71 @@ const SKILL_CATEGORIES = [
       'Flask',
       'FastAPI',
       'Django',
+      'Spring Boot',
       'PyTorch',
       'TensorFlow',
     ],
   },
   {
-    id: 'tools',
-    name: 'Tools',
-    icon: <FaTools />,
+    id: 'backend',
+    name: 'Backend & APIs',
+    icon: <FaServer />,
     skills: [
-      'Docker',
-      'Kubernetes',
-      'AWS',
-      'GitHub Actions',
+      'RESTful APIs',
+      'GraphQL',
+      'JPA/Hibernate',
       'PostgreSQL',
       'MongoDB',
       'Redis',
+      'Microservices',
+      'Docker',
+      'Kubernetes',
+    ],
+  },
+  {
+    id: 'ml-ai',
+    name: 'ML & AI',
+    icon: <FaBrain />,
+    skills: [
+      'LightGBM',
+      'SHAP',
+      'scikit-learn',
+      'Pandas',
+      'NumPy',
+      'Matplotlib',
+      'LangChain',
+      'Keras',
+      'ML Model Deployment',
+    ],
+  },
+  {
+    id: 'tools',
+    name: 'Tools & DevOps',
+    icon: <FaTools />,
+    skills: [
+      'Git',
+      'GitHub Actions',
+      'AWS',
+      'Render',
       'Tableau',
+      'Maven',
+      'JUnit',
+      'Mockito',
+      'CI/CD',
     ],
   },
   {
     id: 'libraries',
-    name: 'Libraries',
+    name: 'Libraries & Data',
     icon: <FaDatabase />,
     skills: [
-      'Pandas',
-      'NumPy',
-      'scikit-learn',
-      'Matplotlib',
       'Streamlit',
-      'LangChain',
-      'Keras',
+      'Tailwind CSS',
+      'Framer Motion',
+      'React Router',
+      'JdbcTemplate',
+      'Spring Data JPA',
+      'Validation',
     ],
   },
 ];
@@ -69,7 +118,7 @@ export default function Skills() {
         Technical Skills
       </h2>
 
-      <div className="grid  grid-cols-2 sm:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {SKILL_CATEGORIES.map((cat) => (
           <div key={cat.id} className="flex justify-center">
             <motion.div
@@ -86,7 +135,7 @@ export default function Skills() {
                 {/** Front Side */}
                 <div
                   style={{ backfaceVisibility: 'hidden' }}
-                  className="absolute inset-0 bg-white dark:bg-neutral-900 rounded-lg shadow-md flex flex-col justify-center items-center p-4 cursor-pointer"
+                  className="absolute inset-0 bg-white dark:bg-neutral-900 rounded-lg shadow-md flex flex-col justify-center items-center p-4 cursor-pointer hover:shadow-lg transition-shadow duration-200"
                 >
                   <span className="text-primary-light dark:text-primary-dark text-3xl">
                     {cat.icon}
@@ -102,13 +151,8 @@ export default function Skills() {
                     backfaceVisibility: 'hidden',
                     transform: 'rotateY(180deg)',
                   }}
-                  //   className="absolute inset-0 bg-white dark:bg-neutral-900 rounded-lg shadow-md p-4 flex flex-col"
                   className="absolute inset-0 bg-white dark:bg-neutral-900 rounded-lg shadow-md flex flex-col justify-center items-center p-4 text-center"
                 >
-                  {/* <p className="text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300 text-center">
-                    {cat.name}
-                  </p> */}
-                  {/* <div className="flex flex-wrap justify-center gap-2 overflow-auto text-center"> */}
                   <div className="flex flex-wrap justify-center items-center gap-2">
                     {cat.skills.map((tech) => (
                       <span
