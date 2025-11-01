@@ -15,16 +15,19 @@ const Home = () => {
           Hi, I'm Rohan 👋
         </motion.h1>
 
-        <p className="max-w-3xl text-base sm:text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 drop-shadow-sm">
-          I'm a Master's student in Computer Science at USC, specializing in AI
-          and ML. My passion lies in building data-driven solutions and
-          generative AI models that create impact.
+        <p className="max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-center text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 drop-shadow-sm">
+          I build intelligent systems that scale. Currently pursuing my Master's
+          in Computer Science at USC while working as a Software Engineer at USC
+          Advancement Services, where I develop NLP-powered solutions and
+          optimize data pipelines serving 440+ users.
         </p>
 
-        <p className="max-w-2xl text-sm sm:text-base leading-relaxed sm:leading-loose text-gray-600 dark:text-gray-400 mb-10 sm:mb-12">
-          With internships at DMI Finance and ResoluteAI, I've fine-tuned LLMs,
-          developed data-visualization tools, and optimized ML pipelines. Always
-          exploring, always building.
+        <p className="max-w-3xl mx-auto text-sm sm:text-base leading-relaxed text-center text-gray-600 dark:text-gray-400 mb-10 sm:mb-12">
+          From re-architecting inference engines at DMI Finance (98% accuracy,
+          2x throughput) to deploying sub-100ms ML microservices at ResoluteAI,
+          I specialize in the intersection of full-stack engineering and
+          AI—turning complex technical challenges into elegant, production-ready
+          solutions.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">

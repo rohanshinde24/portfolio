@@ -1,34 +1,31 @@
-<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
     </linearGradient>
   </defs>
   
   <!-- Background -->
-  <rect width="400" height="300" fill="url(#bg)" rx="20"/>
+  <rect width="800" height="400" fill="url(#grad1)"/>
   
-  <!-- Database Icon -->
-  <rect x="150" y="80" width="100" height="60" fill="white" rx="8"/>
-  <rect x="160" y="90" width="80" height="8" fill="#3B82F6" rx="4"/>
-  <rect x="160" y="105" width="60" height="8" fill="#3B82F6" rx="4"/>
-  <rect x="160" y="120" width="70" height="8" fill="#3B82F6" rx="4"/>
+  <!-- Database icon -->
+  <ellipse cx="200" cy="150" rx="60" ry="25" fill="#60a5fa" opacity="0.8"/>
+  <rect x="140" y="150" width="120" height="80" fill="#60a5fa" opacity="0.8"/>
+  <ellipse cx="200" cy="230" rx="60" ry="25" fill="#3b82f6"/>
   
-  <!-- Query Lines -->
-  <rect x="80" y="180" width="240" height="4" fill="white" rx="2"/>
-  <rect x="80" y="190" width="200" height="4" fill="white" rx="2"/>
-  <rect x="80" y="200" width="220" height="4" fill="white" rx="2"/>
+  <!-- Arrow -->
+  <path d="M 280 190 L 380 190" stroke="#ffffff" stroke-width="4" fill="none"/>
+  <path d="M 370 180 L 380 190 L 370 200" stroke="#ffffff" stroke-width="4" fill="none"/>
   
-  <!-- Magnifying Glass -->
-  <circle cx="320" cy="100" r="25" fill="none" stroke="white" stroke-width="3"/>
-  <line x1="340" y1="120" x2="355" y2="135" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <!-- Optimized query icon -->
+  <rect x="420" y="140" width="180" height="100" rx="10" fill="#ffffff" opacity="0.2"/>
+  <text x="450" y="175" font-family="monospace" font-size="14" fill="#ffffff">SELECT id, name</text>
+  <text x="450" y="195" font-family="monospace" font-size="14" fill="#ffffff">FROM users</text>
+  <text x="450" y="215" font-family="monospace" font-size="14" fill="#ffffff">WHERE id = ?</text>
   
-  <!-- Text -->
-  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">QueryLens</text>
-  <text x="200" y="270" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">SQL Analysis & Optimization</text>
+  <!-- Title -->
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">QueryLens</text>
+  <text x="400" y="365" font-family="Arial, sans-serif" font-size="20" fill="#e0e7ff" text-anchor="middle">SQL Query Optimization</text>
 </svg>
+
