@@ -25,7 +25,7 @@ export default function About() {
         transition={{ delay: 0.3 }}
       >
         I believe the best technology grows out of{' '}
-        <strong>real human needs</strong>—whether that's making data more
+        <strong>real human needs</strong>, whether that's making data more
         accessible for non-technical teams or crafting LLMs that actually{' '}
         <em>understand context</em>. When I'm not refining models, you'll find
         me hitting the gym, exploring new trails on weekend hikes, shooting
