@@ -23,11 +23,10 @@ const Home = () => {
         </p>
 
         <p className="max-w-3xl mx-auto text-sm sm:text-base leading-relaxed text-center text-gray-600 dark:text-gray-400 mb-10 sm:mb-12">
-          From re-architecting inference engines at DMI Finance (98% accuracy,
-          2x throughput) to deploying sub-100ms ML microservices at ResoluteAI,
-          I specialize in the intersection of full-stack engineering and
-          AI—turning complex technical challenges into elegant, production-ready
-          solutions.
+          From re-architecting inference engines at DMI Finance to deploying ML
+          microservices at ResoluteAI, I specialize in the intersection of
+          full-stack engineering and AI, turning complex technical challenges
+          into elegant, production-ready solutions.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">
