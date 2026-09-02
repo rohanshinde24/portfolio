@@ -33,8 +33,8 @@ export default function Navbar() {
     `cursor-pointer transition relative 
      ${
        activeId === id
-         ? 'text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4 decoration-2'
-         : 'text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400'
+         ? 'text-accent dark:text-accent-dark font-semibold underline underline-offset-4 decoration-2'
+         : 'text-muted dark:text-muted-dark hover:text-accent dark:hover:text-accent-dark'
      }`;
 
   const handleResumeClick = (e) => {
@@ -52,10 +52,10 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur bg-white/80 dark:bg-neutral-900/80 shadow-sm border-b border-gray-200 dark:border-neutral-700">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur bg-surface/90 dark:bg-surface-dark/90 border-b border-line dark:border-line-dark">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-xl font-bold text-primary-light dark:text-primary-dark tracking-tight">
+        <h1 className="font-display text-2xl font-semibold text-ink dark:text-ink-dark tracking-tight">
           Rohan Shinde
         </h1>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={handleResumeClick}
-            className="px-4 py-2 border border-primary-light dark:border-primary-dark rounded-md hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition-colors text-primary-light dark:text-primary-dark"
+            className="px-4 py-2 border border-line dark:border-line-dark rounded-md hover:border-accent hover:text-accent dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors text-ink dark:text-ink-dark"
           >
             Resume
           </button>
@@ -85,7 +85,7 @@ export default function Navbar() {
         {/* Hamburger Icon */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-gray-800 dark:text-white text-2xl p-2"
+          className="md:hidden text-ink dark:text-ink-dark text-2xl p-2"
           aria-label="Toggle navigation"
         >
           {isOpen ? <HiX /> : <HiMenu />}
@@ -97,7 +97,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-white dark:bg-neutral-900 border-t border-gray-200 dark:border-neutral-700 px-4 sm:px-6 py-6 flex flex-col items-center gap-6 text-base font-medium text-gray-800 dark:text-gray-100"
+          className="md:hidden bg-surface dark:bg-surface-dark border-t border-line dark:border-line-dark px-4 sm:px-6 py-6 flex flex-col items-center gap-6 text-base font-medium text-ink dark:text-ink-dark"
         >
           <ThemeToggle />
           {navItems.map((item) => (
@@ -115,7 +115,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={handleResumeClick}
-            className="w-full text-center border border-primary-light dark:border-primary-dark px-4 py-3 rounded-md text-primary-light dark:text-primary-dark hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition-colors font-medium"
+            className="w-full text-center border border-line dark:border-line-dark px-4 py-3 rounded-md text-ink dark:text-ink-dark hover:border-accent hover:text-accent dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors font-medium"
           >
             Resume
           </button>

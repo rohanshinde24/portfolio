@@ -57,11 +57,11 @@ export default function AnimatedSection({ id, children }) {
     <motion.section
       ref={ref}
       id={id}
-      className="scroll-mt-16 w-full min-h-screen flex flex-col justify-center items-center bg-white dark:bg-neutral-900 py-16 sm:py-20"
+      className="scroll-mt-16 w-full min-h-screen flex flex-col justify-center items-center bg-canvas dark:bg-canvas-dark py-16 sm:py-20"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      viewport={{ once: false, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.1 }}
       aria-labelledby={`${id}-heading`}
     >
       <div className="w-full max-w-6xl px-4 sm:px-6">{children}</div>

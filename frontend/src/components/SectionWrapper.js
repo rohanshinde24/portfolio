@@ -11,9 +11,15 @@
 //     </section>
 //   );
 // }
-export default function SectionWrapper({ children, fullWidth = false }) {
+export default function SectionWrapper({
+  children,
+  fullWidth = false,
+  className = '',
+}) {
   return (
-    <section className="scroll-mt-16 w-full flex flex-col justify-center items-center text-center bg-white dark:bg-neutral-900 py-16">
+    <section
+      className={`scroll-mt-16 w-full flex flex-col justify-center items-center text-center bg-canvas dark:bg-canvas-dark py-16 ${className}`}
+    >
       <div className={fullWidth ? 'w-full' : 'w-full max-w-6xl px-6'}>
         {children}
       </div>

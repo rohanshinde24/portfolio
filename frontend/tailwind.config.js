@@ -1,37 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 
-import { fontFamily } from 'tailwindcss/defaultTheme';
-
 module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        primary: {
-          light: '#3b82f6', // blue-500
-          dark: '#60a5fa', // blue-400
-        },
-        background: {
-          light: '#ffffff',
-          dark: '#0f172a', // slate-900
-        },
-        text: {
-          light: '#1f2937', // gray-800
-          dark: '#f8fafc', // slate-50
-        },
+        canvas: { DEFAULT: '#F7F4EE', dark: '#171B18' },
+        surface: { DEFAULT: '#FFFDF8', dark: '#202621' },
+        ink: { DEFAULT: '#1F2521', dark: '#F3EFE6' },
+        muted: { DEFAULT: '#5E665F', dark: '#B9C0B6' },
+        line: { DEFAULT: '#D8D4CA', dark: '#39423A' },
         accent: {
-          light: '#6366f1', // indigo-500
-          dark: '#818cf8', // indigo-400
+          DEFAULT: '#A54B2A',
+          hover: '#823A20',
+          soft: '#F1E0D7',
+          dark: '#E19A78',
+          darkHover: '#F0B18F',
+          darkSoft: '#4A3026',
         },
-        fontFamily: {
-          sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-        },
+      },
+      fontFamily: {
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['IBM Plex Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },
-
-  darkMode: 'class',
 
   plugins: [
     require('@tailwindcss/typography'),

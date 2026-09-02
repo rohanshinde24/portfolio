@@ -1,5 +1,19 @@
 export const experienceData = [
   {
+    company: 'Amazon - SCOT, Fulfill to Promise',
+    logo: '/assets/logos/amazon.svg',
+    location: 'Bellevue, WA',
+    role: 'Software Development Engineer Intern',
+    type: 'Internship',
+    period: 'May 2026 - Aug 2026',
+    highlights: [
+      'Designed, tested, and deployed a production Model Context Protocol (MCP) server with four Java tools using AWS Lambda, API Gateway, DynamoDB, and S3, achieving over 95% unit test coverage.',
+      'Re-engineered retrieval of historical plans from thousands of time-stamped S3 objects per order, replacing paginated listings with DynamoDB date-range queries to accelerate lookup and reduce agent-context usage.',
+      'Integrated the MCP with an internal troubleshooting service, accelerating fulfillment-decision analysis for approximately 5,000 internal users and reducing on-call investigation time by 70%, from 50 to 15 minutes.',
+      'Owned end-to-end delivery across supply-chain teams, coordinating engineers, PMs, and BI analysts while driving production readiness through AWS CDK and CloudWatch observability.',
+    ],
+  },
+  {
     company: 'University of Southern California',
     logo: '/assets/logos/usc.svg',
     location: 'Los Angeles, CA',

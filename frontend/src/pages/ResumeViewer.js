@@ -86,25 +86,25 @@ export default function ResumeViewer() {
           >
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 text-3xl text-red-500 hover:text-red-600 z-50 p-2 bg-white/10 backdrop-blur rounded-full transition-colors"
+              className="absolute top-4 right-4 text-3xl text-ink dark:text-ink-dark hover:text-accent dark:hover:text-accent-dark z-50 p-2 bg-surface/90 dark:bg-surface-dark/90 backdrop-blur rounded-md transition-colors"
               aria-label="Close Resume"
               style={{ WebkitTapHighlightColor: 'transparent' }}
             >
               <IoClose />
             </button>
-            <div className="w-full max-w-md bg-white dark:bg-neutral-900 rounded-lg shadow-lg p-8 flex flex-col items-center">
-              <h2 className="text-xl font-bold mb-6 text-primary-light dark:text-primary-dark text-center">
+            <div className="w-full max-w-md bg-surface dark:bg-surface-dark rounded-lg border border-line dark:border-line-dark p-8 flex flex-col items-center">
+              <h2 className="font-display text-2xl font-semibold mb-6 text-ink dark:text-ink-dark text-center">
                 Download Resume
               </h2>
               <a
                 href="/resume.pdf"
                 download
-                className="w-full text-center bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-base mb-2"
+                className="w-full text-center bg-accent text-white font-semibold py-3 px-6 rounded-md hover:bg-accent-hover transition-colors text-base mb-2"
                 style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 Download PDF
               </a>
-              <span className="text-gray-500 dark:text-gray-400 text-xs mt-2 text-center">
+              <span className="text-muted dark:text-muted-dark text-xs mt-2 text-center">
                 If the download doesn't start,{' '}
                 <a
                   href="/resume.pdf"
@@ -149,31 +149,31 @@ export default function ResumeViewer() {
         >
           <button
             onClick={handleClose}
-            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-3xl text-red-500 hover:text-red-600 z-50 p-2 bg-white/10 backdrop-blur rounded-full transition-colors touch-manipulation"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-3xl text-ink dark:text-ink-dark hover:text-accent dark:hover:text-accent-dark z-50 p-2 bg-surface/90 dark:bg-surface-dark/90 backdrop-blur rounded-md transition-colors touch-manipulation"
             aria-label="Close Resume"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             <IoClose />
           </button>
 
-          <div className="w-full max-w-5xl h-[85vh] sm:h-[90vh] border border-white/20 dark:border-neutral-700 rounded-lg shadow-lg overflow-hidden bg-white dark:bg-neutral-900 relative">
+          <div className="w-full max-w-5xl h-[85vh] sm:h-[90vh] border border-line dark:border-line-dark rounded-lg overflow-hidden bg-surface dark:bg-surface-dark relative">
             {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-neutral-900">
-                <div className="text-lg text-gray-600 dark:text-gray-400">
+              <div className="absolute inset-0 flex items-center justify-center bg-surface dark:bg-surface-dark">
+                <div className="text-lg text-muted dark:text-muted-dark">
                   Loading resume...
                 </div>
               </div>
             )}
 
             {hasError ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-white dark:bg-neutral-900 p-4">
-                <div className="text-lg text-red-600 dark:text-red-400 mb-4">
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-surface dark:bg-surface-dark p-4">
+                <div className="text-lg text-accent dark:text-accent-dark mb-4">
                   Failed to load resume
                 </div>
                 <a
                   href="/resume.pdf"
                   download
-                  className="bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+                  className="bg-accent text-white font-semibold py-2 px-4 rounded-md hover:bg-accent-hover transition-colors"
                 >
                   Download PDF Instead
                 </a>
@@ -194,7 +194,7 @@ export default function ResumeViewer() {
           <a
             href="/resume.pdf"
             download
-            className="mt-4 sm:mt-6 inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base touch-manipulation"
+            className="mt-4 sm:mt-6 inline-block bg-accent text-white font-semibold py-3 px-6 rounded-md hover:bg-accent-hover transition-colors text-sm sm:text-base touch-manipulation"
             style={{ WebkitTapHighlightColor: 'transparent' }}
           >
             Download PDF

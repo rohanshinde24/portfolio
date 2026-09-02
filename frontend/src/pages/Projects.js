@@ -86,26 +86,6 @@ const projects = [
     category: 'Frontend Development',
   },
   {
-    name: 'Brain Tumor Classifier',
-    description: 'Deep learning classifier for MRI scans using ResNet50.',
-    fullDescription:
-      'This project utilizes a deep convolutional neural network (ResNet50) for classifying MRI brain scans into tumor or non-tumor categories. Leveraged data augmentation, transfer learning, and early stopping to reach over 92% validation accuracy on a balanced dataset. Trained and evaluated using TensorFlow and Keras.',
-    tech: ['Python', 'TensorFlow', 'Keras'],
-    // link: 'https://github.com/rohan/brain-tumor-classifier',
-    image: '/images/brain-tumor.png',
-    category: 'Machine Learning',
-  },
-  {
-    name: 'Movie Recommender System',
-    description: 'Collaborative filtering system using Surprise and TMDB APIs.',
-    fullDescription:
-      'Built a movie recommendation system using collaborative filtering and matrix factorization. Integrated TMDB APIs for movie metadata and visuals. Implemented KNN-based user-item similarity using Surprise, with evaluation metrics like RMSE and MAE on the MovieLens dataset.',
-    tech: ['Python', 'Surprise', 'Pandas', 'TMDB API'],
-    link: 'https://github.com/rohanshinde24/movie-rec',
-    image: '/images/movie-recommender.png',
-    category: 'Machine Learning',
-  },
-  {
     name: 'Autonomous Kart Racing Agent',
     description:
       'Reinforcement learning agents trained in Unity for optimal racing.',
@@ -148,8 +128,8 @@ export default function Projects() {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="w-full py-8 sm:py-12 px-4 sm:px-6 bg-white dark:bg-neutral-900">
-      <h2 className="text-4xl font-extrabold mb-8 sm:mb-12 text-primary-light dark:text-primary-dark drop-shadow-lg text-center">
+    <div className="w-full py-12 sm:py-20 px-4 sm:px-6 bg-surface dark:bg-surface-dark">
+      <h2 className="font-display text-4xl sm:text-5xl font-semibold mb-8 sm:mb-12 text-ink dark:text-ink-dark text-center">
         Projects
       </h2>
 
@@ -159,10 +139,10 @@ export default function Projects() {
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`px-4 py-2 rounded-md border text-sm font-medium transition-colors duration-200 ${
               selectedCategory === category
-                ? 'bg-primary-light dark:bg-primary-dark text-white shadow-lg'
-                : 'bg-gray-200 dark:bg-neutral-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-neutral-600'
+                ? 'bg-accent-soft border-accent text-accent dark:bg-accent-darkSoft dark:border-accent-dark dark:text-accent-dark'
+                : 'bg-transparent border-line text-muted hover:border-accent hover:text-accent dark:border-line-dark dark:text-muted-dark dark:hover:border-accent-dark dark:hover:text-accent-dark'
             }`}
           >
             {category}
@@ -178,49 +158,47 @@ export default function Projects() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
             onClick={() => setSelectedProject(project)}
-            className="p-6 sm:p-8 rounded-xl bg-white dark:bg-neutral-900 shadow-lg border border-gray-200 dark:border-neutral-700 cursor-pointer hover:shadow-xl transition-shadow duration-200"
+            className="p-6 sm:p-8 rounded-lg bg-canvas dark:bg-canvas-dark border border-line dark:border-line-dark cursor-pointer hover:border-accent dark:hover:border-accent-dark transition-colors duration-200"
           >
             {project.image && (
               <div className="relative mb-4 sm:mb-6">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-40 sm:h-48 object-cover rounded-md"
+                  className="w-full h-40 sm:h-48 object-cover rounded-md border border-line dark:border-line-dark"
                 />
                 <div className="absolute top-2 right-2">
-                  <span className="px-2 py-1 text-xs font-medium bg-primary-light dark:bg-primary-dark text-white rounded-full">
+                  <span className="px-2 py-1 text-xs font-medium bg-surface/95 dark:bg-surface-dark/95 text-ink dark:text-ink-dark border border-line dark:border-line-dark rounded">
                     {project.category}
                   </span>
                 </div>
               </div>
             )}
-            <h3 className="text-xl sm:text-2xl font-semibold text-primary-light dark:text-primary-dark mb-3">
+            <h3 className="font-display text-2xl font-semibold text-ink dark:text-ink-dark mb-3">
               {project.name}
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm sm:text-base">
+            <p className="text-muted dark:text-muted-dark mb-4 text-sm sm:text-base">
               {project.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {project.tech.slice(0, 4).map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 text-xs bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-400 rounded"
+                  className="px-2 py-1 text-xs bg-accent-soft dark:bg-accent-darkSoft text-muted dark:text-muted-dark rounded"
                 >
                   {tech}
                 </span>
               ))}
               {project.tech.length > 4 && (
-                <span className="px-2 py-1 text-xs bg-gray-100 dark:bg-neutral-800 text-gray-600 dark:text-gray-400 rounded">
+                <span className="px-2 py-1 text-xs bg-accent-soft dark:bg-accent-darkSoft text-muted dark:text-muted-dark rounded">
                   +{project.tech.length - 4} more
                 </span>
               )}
             </div>
             {project.demo && (
-              <div className="text-sm text-accent-light dark:text-accent-dark font-medium">
-                🌐 Live Demo Available
+              <div className="text-sm text-accent dark:text-accent-dark font-medium">
+                Live demo available
               </div>
             )}
           </motion.div>

@@ -21,7 +21,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="text-xl text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition"
+      className="text-xl text-muted dark:text-muted-dark hover:text-accent dark:hover:text-accent-dark transition-colors"
       aria-label="Toggle Theme"
     >
       {theme === 'dark' ? <HiSun /> : <HiMoon />}

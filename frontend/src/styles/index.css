@@ -1,53 +1,37 @@
-/* src/styles/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
-/* Tailwind base, components, utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Custom global resets & base styles */
-body {
-  margin: 0;
-  font-family:
-    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Add Tailwind background and text color for a dark theme */
-  @apply bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-800 text-white;
-}
-/* body {
-  @apply bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-800 text-white;
-} */
 
 code {
   font-family:
     source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* html {
-  scroll-behavior: smooth;
-} */
 html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: white; /* or neutral-900 for dark mode */
+  background-color: #f7f4ee;
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
 }
 html {
-  scroll-behavior: smooth;
-  @apply bg-background-light text-text-light;
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
-  font-family: 'Inter', sans-serif;
+  @apply bg-canvas text-ink font-sans;
 }
 
 .dark html {
-  @apply bg-background-dark text-text-dark;
+  @apply bg-canvas-dark text-ink-dark;
+}
+
+body {
+  @apply bg-canvas text-ink antialiased dark:bg-canvas-dark dark:text-ink-dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   overflow-y: scroll; /* still allow scrolling */
@@ -62,6 +46,10 @@ body::-webkit-scrollbar {
 }
 body.modal-open {
   overflow: hidden;
+}
+
+::selection {
+  @apply bg-accent-soft text-ink dark:bg-accent-darkSoft dark:text-ink-dark;
 }
 
 /* Ensure sections are properly visible on mobile */

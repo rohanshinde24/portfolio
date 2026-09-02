@@ -25,11 +25,15 @@ export default function ContactForm() {
       message: form.get('message'),
     };
 
-    const ok = await sendToServer(payload);
-    if (ok) {
-      setStatus('sent');
-      formRef.current.reset();
-    } else {
+    try {
+      const ok = await sendToServer(payload);
+      if (ok) {
+        setStatus('sent');
+        formRef.current.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
       setStatus('error');
     }
   };
@@ -45,40 +49,39 @@ export default function ContactForm() {
         name="user_name"
         placeholder="Your Name"
         required
-        className="w-full px-4 py-3 border rounded-md bg-white dark:bg-neutral-900 text-gray-800"
+        className="w-full px-4 py-3 border border-line dark:border-line-dark rounded-md bg-canvas dark:bg-canvas-dark text-ink dark:text-ink-dark placeholder:text-muted focus:border-accent focus:ring-accent"
       />
       <input
         type="email"
         name="user_email"
         placeholder="Your Email"
         required
-        className="w-full px-4 py-3 border rounded-md bg-white dark:bg-neutral-900 text-gray-800"
+        className="w-full px-4 py-3 border border-line dark:border-line-dark rounded-md bg-canvas dark:bg-canvas-dark text-ink dark:text-ink-dark placeholder:text-muted focus:border-accent focus:ring-accent"
       />
       <textarea
         name="message"
         placeholder="Your Message"
         required
         rows="5"
-        className="w-full px-4 py-3 border rounded-md bg-white dark:bg-neutral-900 text-gray-800"
+        className="w-full px-4 py-3 border border-line dark:border-line-dark rounded-md bg-canvas dark:bg-canvas-dark text-ink dark:text-ink-dark placeholder:text-muted focus:border-accent focus:ring-accent"
       />
 
       <motion.button
         type="submit"
-        whileTap={{ scale: 0.95 }}
         disabled={status === 'sending'}
-        className="bg-blue-600 text-white font-semibold py-3 px-6 rounded-md w-full disabled:opacity-60"
+        className="bg-accent hover:bg-accent-hover dark:bg-accent-dark dark:hover:bg-accent-darkHover text-white font-semibold py-3 px-6 rounded-md w-full transition-colors disabled:opacity-60"
       >
         {status === 'sending' ? 'Sending...' : 'Send Message'}
       </motion.button>
 
       {status === 'sent' && (
-        <p className="text-green-500 text-center">
-          ✅ Message sent! I’ll be in touch soon.
+        <p className="text-accent dark:text-accent-dark text-center">
+          Message sent. I’ll be in touch soon.
         </p>
       )}
       {status === 'error' && (
-        <p className="text-red-500 text-center">
-          ❌ Oops, something went wrong.
+        <p className="text-accent dark:text-accent-dark text-center">
+          Something went wrong. Please try again.
         </p>
       )}
     </form>

@@ -3,47 +3,42 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <div className="w-full py-8 sm:py-12 px-4 sm:px-6 bg-white dark:bg-neutral-900 min-h-screen flex flex-col justify-center items-center">
+    <div className="w-full py-12 sm:py-20 px-4 sm:px-6 bg-canvas dark:bg-canvas-dark min-h-screen flex flex-col justify-center items-center">
       <div className="flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
         <motion.h1
           id="home-heading"
-          className="text-4xl sm:text-6xl font-extrabold mb-6 sm:mb-8 leading-snug sm:leading-tight tracking-tight text-primary-light dark:text-primary-dark drop-shadow-lg"
+          className="font-display text-5xl sm:text-7xl font-semibold mb-6 sm:mb-8 leading-[0.95] tracking-tight text-ink dark:text-ink-dark"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          Hi, I'm Rohan 👋
+          Rohan Shinde
         </motion.h1>
 
-        <p className="max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-center text-gray-700 dark:text-gray-300 mb-6 sm:mb-8 drop-shadow-sm">
-          I build intelligent systems that scale. Currently pursuing my Master's
-          in Computer Science at USC while working as a Software Engineer at USC
-          Advancement Services, where I develop NLP-powered solutions and
-          optimize data pipelines serving 440+ users.
+        <p className="max-w-3xl mx-auto text-lg sm:text-xl leading-relaxed text-center text-ink dark:text-ink-dark mb-6 sm:mb-8">
+          Software engineer building reliable systems across cloud
+          infrastructure, data, and applied AI. I am pursuing an M.S. in
+          Computer Science at USC and recently worked on fulfillment tooling at
+          Amazon.
         </p>
 
-        <p className="max-w-3xl mx-auto text-sm sm:text-base leading-relaxed text-center text-gray-600 dark:text-gray-400 mb-10 sm:mb-12">
-          From re-architecting inference engines at DMI Finance to deploying ML
-          microservices at ResoluteAI, I specialize in the intersection of
-          full-stack engineering and AI, turning complex technical challenges
-          into elegant, production-ready solutions.
+        <p className="max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-center text-muted dark:text-muted-dark mb-10 sm:mb-12">
+          My work spans Java services on AWS, data platforms for university
+          teams, and production ML systems. I focus on clear engineering
+          tradeoffs, measurable performance, and products people can depend on.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">
           <motion.a
             href="#about"
-            className="w-full sm:w-auto px-6 py-3 rounded-xl text-sm font-semibold transition bg-primary-light text-white hover:bg-accent-light dark:bg-primary-dark dark:hover:bg-accent-dark text-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="w-full sm:w-auto px-6 py-3 rounded-md text-sm font-semibold transition-colors bg-accent text-white hover:bg-accent-hover dark:bg-accent-dark dark:hover:bg-accent-darkHover text-center"
           >
             Learn More About Me
           </motion.a>
 
           <motion.a
             href="#projects"
-            className="w-full sm:w-auto px-6 py-3 rounded-xl text-sm font-semibold transition border border-primary-light text-primary-light hover:bg-blue-50 dark:text-primary-dark dark:border-primary-dark dark:hover:bg-neutral-800 text-center"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="w-full sm:w-auto px-6 py-3 rounded-md text-sm font-semibold transition-colors border border-line text-ink hover:border-accent hover:text-accent dark:border-line-dark dark:text-ink-dark dark:hover:border-accent-dark dark:hover:text-accent-dark text-center"
           >
             View My Projects
           </motion.a>
@@ -54,94 +49,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// ---
-
-// src/pages/Home.jsx
-// import React from 'react';
-// import SectionWrapper from '../components/SectionWrapper';
-// import { motion } from 'framer-motion';
-// import HeroIllustration from '../assets/logo.svg'; // you can swap in any SVG/PNG
-
-// const container = {
-//   hidden: {},
-//   show: {
-//     transition: { staggerChildren: 0.2 },
-//   },
-// };
-// const fadeInUp = {
-//   hidden: { opacity: 0, y: 20 },
-//   show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-// };
-
-// const Home = () => {
-//   return (
-//     <SectionWrapper id="home" fullWidth>
-//       <motion.div
-//         variants={container}
-//         initial="hidden"
-//         animate="show"
-//         className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 px-4 sm:px-6 lg:px-8 py-16"
-//       >
-//         {/* Left side: text & CTAs */}
-//         <motion.div variants={fadeInUp} className="space-y-6">
-//           <h1
-//             id="home-heading"
-//             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary-light dark:text-primary-dark leading-tight tracking-tight drop-shadow-lg"
-//           >
-//             Hi, I'm Rohan Shinde 👋
-//           </h1>
-
-//           <p className="text-gray-700 dark:text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">
-//             I'm a Master's student in Computer Science at USC specializing in
-//             Artificial Intelligence and Machine Learning. I build data-driven
-//             solutions and generative AI models that solve complex problems and
-//             create real impact.
-//           </p>
-
-//           <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed">
-//             With hands-on experience at DMI Finance and ResoluteAI, I've
-//             fine-tuned LLMs, crafted data visualizations, and optimized ML
-//             pipelines—always learning, always building.
-//           </p>
-
-//           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-//             <motion.a
-//               variants={fadeInUp}
-//               href="#about"
-//               className="inline-block px-6 py-3 bg-primary-light text-white rounded-xl text-sm sm:text-base font-semibold shadow-lg hover:bg-accent-light transition"
-//               whileHover={{ scale: 1.05 }}
-//               whileTap={{ scale: 0.95 }}
-//             >
-//               Learn More About Me
-//             </motion.a>
-
-//             <motion.a
-//               variants={fadeInUp}
-//               href="#projects"
-//               className="inline-block px-6 py-3 border-2 border-primary-light text-primary-light rounded-xl text-sm sm:text-base font-semibold hover:bg-primary-light hover:text-white transition"
-//               whileHover={{ scale: 1.05 }}
-//               whileTap={{ scale: 0.95 }}
-//             >
-//               View My Projects
-//             </motion.a>
-//           </div>
-//         </motion.div>
-
-//         {/* Right side: illustration */}
-//         <motion.div
-//           variants={fadeInUp}
-//           className="hidden lg:flex justify-center"
-//         >
-//           <img
-//             src={HeroIllustration}
-//             alt="Rohan Shinde Illustration"
-//             className="w-80 h-auto"
-//           />
-//         </motion.div>
-//       </motion.div>
-//     </SectionWrapper>
-//   );
-// };
-
-// export default Home;

@@ -11,16 +11,16 @@ export default function ProjectModal({ project, onClose }) {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="relative w-full max-w-2xl p-4 sm:p-6 bg-white dark:bg-neutral-900 rounded-xl shadow-lg overflow-y-auto max-h-[90vh]"
+            className="relative w-full max-w-2xl p-5 sm:p-8 bg-surface dark:bg-surface-dark rounded-lg border border-line dark:border-line-dark overflow-y-auto max-h-[90vh]"
             initial={{ scale: 0.8, y: 20 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.8, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
           >
-            <div className="w-12 h-1.5 bg-gray-300 dark:bg-gray-600 rounded-full mx-auto mb-4" />
             <button
               onClick={onClose}
-              className="absolute top-2 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-white text-xl font-bold"
+              className="absolute top-3 right-4 text-muted hover:text-ink dark:text-muted-dark dark:hover:text-ink-dark text-xl font-bold"
+              aria-label="Close project details"
             >
               ✕
             </button>
@@ -28,15 +28,15 @@ export default function ProjectModal({ project, onClose }) {
             {/* Header */}
             <div className="mb-6">
               <div className="flex items-center gap-3 mb-3">
-                <h3 className="text-2xl font-bold text-primary-light dark:text-primary-dark">
+                <h3 className="font-display text-3xl font-semibold text-ink dark:text-ink-dark">
                   {project.name}
                 </h3>
-                <span className="px-3 py-1 text-xs font-medium bg-primary-light dark:bg-primary-dark text-white rounded-full">
+                <span className="px-3 py-1 text-xs font-medium bg-accent-soft dark:bg-accent-darkSoft text-accent dark:text-accent-dark rounded">
                   {project.category}
                 </span>
               </div>
 
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              <p className="text-muted dark:text-muted-dark text-sm leading-relaxed">
                 {project.description}
               </p>
             </div>
@@ -47,21 +47,21 @@ export default function ProjectModal({ project, onClose }) {
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-48 object-cover rounded-lg shadow-md"
+                  className="w-full h-48 object-cover rounded-md border border-line dark:border-line-dark"
                 />
               </div>
             )}
 
             {/* Tech Stack */}
             <div className="mb-6">
-              <h4 className="text-lg font-semibold text-primary-light dark:text-primary-dark mb-3">
+              <h4 className="text-lg font-semibold text-ink dark:text-ink-dark mb-3">
                 Technologies Used
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1 text-sm bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 rounded-full border border-gray-200 dark:border-neutral-700"
+                    className="px-3 py-1 text-sm bg-accent-soft dark:bg-accent-darkSoft text-muted dark:text-muted-dark rounded border border-line dark:border-line-dark"
                   >
                     {tech}
                   </span>
@@ -71,10 +71,10 @@ export default function ProjectModal({ project, onClose }) {
 
             {/* Full Description */}
             <div className="mb-6">
-              <h4 className="text-lg font-semibold text-primary-light dark:text-primary-dark mb-3">
+              <h4 className="text-lg font-semibold text-ink dark:text-ink-dark mb-3">
                 Project Overview
               </h4>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+              <p className="text-muted dark:text-muted-dark leading-relaxed text-sm">
                 {project.fullDescription}
               </p>
             </div>
@@ -84,24 +84,24 @@ export default function ProjectModal({ project, onClose }) {
               {project.link && (
                 <a
                   href={project.link}
-                  className="flex-1 px-6 py-3 bg-primary-light dark:bg-primary-dark text-white font-medium rounded-lg hover:bg-primary-dark dark:hover:bg-primary-light transition-colors duration-200 text-center"
+                  className="flex-1 px-6 py-3 bg-ink dark:bg-ink-dark text-surface dark:text-surface-dark font-medium rounded-md hover:bg-accent dark:hover:bg-accent-dark transition-colors duration-200 text-center"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  📁 View on GitHub
+                  View on GitHub
                 </a>
               )}
 
               {project.demo && (
                 <a
                   href={project.demo}
-                  className={`px-6 py-3 bg-accent-light dark:bg-accent-dark text-white font-medium rounded-lg hover:bg-accent-dark dark:hover:bg-accent-light transition-colors duration-200 text-center ${
+                  className={`px-6 py-3 bg-accent dark:bg-accent-dark text-white font-medium rounded-md hover:bg-accent-hover dark:hover:bg-accent-darkHover transition-colors duration-200 text-center ${
                     project.link ? 'flex-1' : 'w-full'
                   }`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  🌐 Live Demo
+                  Open Live Demo
                 </a>
               )}
             </div>

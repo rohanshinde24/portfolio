@@ -20,7 +20,7 @@ function MainLayout() {
     <>
       <ScrollProgressBar />
       <Navbar />
-      <div className="min-h-screen w-full bg-gradient-to-br from-indigo-900 via-blue-900 to-cyan-800 text-white overflow-x-hidden">
+      <div className="min-h-screen w-full bg-canvas text-ink dark:bg-canvas-dark dark:text-ink-dark overflow-x-hidden">
         <main className="w-full">
           <AnimatedSection id="home">
             <Home />
@@ -62,16 +62,29 @@ function App() {
         />
         <meta
           property="og:description"
-          content="Explore Rohan's AI/ML and full-stack projects, USC experience, and portfolio highlights."
+          content="Software engineer building reliable cloud, data, and applied AI systems."
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/og-image.png"
+          content="https://rohan-dev.vercel.app/images/og-image.jpeg"
         />
-        <meta property="og:url" content="https://yourdomain.com" />
+        <meta property="og:url" content="https://rohan-dev.vercel.app" />
         <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Rohan Shinde | AI/ML & Full Stack Engineer"
+        />
+        <meta
+          name="twitter:description"
+          content="Software engineer building reliable cloud, data, and applied AI systems."
+        />
+        <meta
+          name="twitter:image"
+          content="https://rohan-dev.vercel.app/images/og-image.jpeg"
+        />
         <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#F7F4EE" />
       </Helmet>
 
       <Routes>

@@ -23,7 +23,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-white dark:bg-neutral-900 border-t border-gray-200 dark:border-neutral-700 py-8 mt-20">
+    <footer className="w-full bg-surface dark:bg-surface-dark border-t border-line dark:border-line-dark py-10 mt-20">
       <motion.div
         className="max-w-6xl mx-auto px-6 text-center flex flex-col items-center gap-6"
         initial={{ opacity: 0, y: 20 }}
@@ -34,17 +34,17 @@ export default function Footer() {
         {/* Resume Button */}
         <button
           onClick={handleResumeClick}
-          className="px-5 py-2 border border-primary-light dark:border-primary-dark rounded-md text-primary-light dark:text-primary-dark hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark transition"
+          className="px-5 py-2 border border-line dark:border-line-dark rounded-md text-ink dark:text-ink-dark hover:border-accent hover:text-accent dark:hover:border-accent-dark dark:hover:text-accent-dark transition-colors"
         >
           Resume
         </button>
 
         {/* Social Icons */}
-        <div className="flex justify-center items-center gap-6 text-xl text-gray-700 dark:text-gray-300 mx-auto">
+        <div className="flex justify-center items-center gap-6 text-xl text-muted dark:text-muted-dark mx-auto">
           <a
             href="mailto:rohanshi@usc.edu"
             aria-label="Email"
-            className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="hover:text-accent dark:hover:text-accent-dark transition-colors duration-200"
           >
             <FaEnvelope />
           </a>
@@ -53,7 +53,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="hover:text-accent dark:hover:text-accent-dark transition-colors duration-200"
           >
             <FaLinkedin />
           </a>
@@ -62,14 +62,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+            className="hover:text-accent dark:hover:text-accent-dark transition-colors duration-200"
           >
             <FaGithub />
           </a>
         </div>
 
         {/* Copyright */}
-        <p className="text-sm text-gray-500 dark:text-gray-500">
+        <p className="text-sm text-muted dark:text-muted-dark">
           © {new Date().getFullYear()} Rohan Shinde. All rights reserved.
         </p>
       </motion.div>
