@@ -83,7 +83,7 @@ function App() {
           name="twitter:image"
           content="https://rohan-dev.vercel.app/images/og-image.jpeg"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="theme-color" content="#F7F4EE" />
       </Helmet>
 
