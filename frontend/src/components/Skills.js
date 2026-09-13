@@ -58,6 +58,30 @@ const SKILL_CATEGORIES = [
     ],
   },
   {
+    name: 'Agentic Systems',
+    skills: [
+      'Model Context Protocol (MCP)',
+      'LangChain',
+      'LangGraph',
+      'vLLM',
+      'Tool Calling',
+      'Structured Outputs',
+      'LLM Evaluation',
+      'Deterministic Guardrails',
+    ],
+  },
+  {
+    name: 'Observability',
+    skills: [
+      'OpenTelemetry',
+      'CloudWatch',
+      'Prometheus',
+      'Grafana',
+      'Tempo',
+      'Trace Context Propagation',
+    ],
+  },
+  {
     name: 'Databases',
     skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'],
   },

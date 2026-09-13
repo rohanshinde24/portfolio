@@ -16,7 +16,7 @@ const Home = () => {
         </motion.h1>
 
         <p className="max-w-3xl mx-auto text-lg sm:text-xl leading-relaxed text-center text-ink dark:text-ink-dark mb-6 sm:mb-8">
-          Software engineer building reliable systems across cloud
+          Software engineer building reliable distributed systems across cloud
           infrastructure, data, and applied AI. I am pursuing an M.S. in
           Computer Science at USC and recently worked on fulfillment tooling at
           Amazon.
@@ -25,7 +25,7 @@ const Home = () => {
         <p className="max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-center text-muted dark:text-muted-dark mb-10 sm:mb-12">
           My work spans Java services on AWS, data platforms for university
           teams, and production ML systems. I focus on clear engineering
-          tradeoffs, measurable performance, and products people can depend on.
+          tradeoffs, measurable performance, and systems people can depend on.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">
