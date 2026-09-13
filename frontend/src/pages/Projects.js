@@ -107,6 +107,46 @@ const projects = [
     image: '/images/smartjournal.png',
     category: 'Mobile Development',
   },
+  {
+    name: 'LedgerFlow',
+    description:
+      'Financial-operations platform where deterministic services govern every agent-proposed action.',
+    fullDescription:
+      'Built a financial-operations platform for synthetic small-business data that handles categorization, invoice and payment reconciliation, anomaly detection, and investigation. A Java 21 and Spring Boot core owns monetary precision, accounting invariants, validation, and reconciliation candidates; a separate FastAPI agent service can only use typed read capabilities to investigate ambiguity and return proposals. The design keeps nondeterministic reasoning outside financial state changes, with deterministic validation, escalation, and auditable outcomes at every decision boundary.',
+    tech: [
+      'Java 21',
+      'Spring Boot',
+      'Python',
+      'FastAPI',
+      'Next.js',
+      'PostgreSQL',
+      'Docker',
+      'REST API',
+    ],
+    image: '/images/ledgerflow.svg',
+    category: 'Full-Stack Systems',
+  },
+  {
+    name: 'CareRoute',
+    description:
+      'Safety-first referral coordination with bounded model assistance and deterministic workflow control.',
+    fullDescription:
+      'Built a synthetic-data referral-coordination system that places model reasoning at bounded ambiguity points without allowing it to control workflow state or booking. Two FastAPI services own separate PostgreSQL domains and communicate through a typed HTTP gateway; booking remains a single, confirmation-gated, idempotent transaction in the provider domain. Durable Inngest workflows, transactional outboxes relayed through Redis Streams, and OpenTelemetry traces support recovery and auditability. Every model proposal is schema-constrained, limited to observed candidates, deterministically validated, and fails closed to human review when invalid or uncertain.',
+    tech: [
+      'Python',
+      'FastAPI',
+      'Next.js',
+      'PostgreSQL',
+      'Redis',
+      'Inngest',
+      'LangGraph',
+      'OpenTelemetry',
+      'Docker',
+    ],
+    link: 'https://github.com/rohanshinde24/CareRoute',
+    image: '/images/careroute.svg',
+    category: 'Full-Stack Systems',
+  },
 ];
 
 const cardVariants = {

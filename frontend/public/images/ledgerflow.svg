@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">LedgerFlow financial operations illustration</title>
+  <desc id="desc">A structured financial ledger with a validation checkpoint.</desc>
+  <rect width="800" height="400" fill="#f5f0e8"/>
+  <path d="M0 74H800M0 150H800M0 226H800M0 302H800" stroke="#d8cec0" stroke-width="1"/>
+  <path d="M84 0V400M242 0V400M400 0V400M558 0V400M716 0V400" stroke="#d8cec0" stroke-width="1"/>
+  <rect x="84" y="74" width="632" height="228" fill="#fbf8f2" stroke="#25231f" stroke-width="2"/>
+  <path d="M84 132H716M84 188H716M84 244H716M242 74V302M510 74V302" stroke="#d8cec0" stroke-width="1"/>
+  <text x="108" y="109" fill="#736b60" font-family="Georgia, serif" font-size="14" letter-spacing="2">LEDGER</text>
+  <text x="266" y="109" fill="#736b60" font-family="Georgia, serif" font-size="14" letter-spacing="2">EVIDENCE</text>
+  <text x="536" y="109" fill="#736b60" font-family="Georgia, serif" font-size="14" letter-spacing="2">DECISION</text>
+  <text x="108" y="166" fill="#25231f" font-family="Georgia, serif" font-size="22">Payment 0418</text>
+  <text x="266" y="166" fill="#736b60" font-family="Georgia, serif" font-size="18">Invoice 1092</text>
+  <text x="108" y="222" fill="#25231f" font-family="Georgia, serif" font-size="22">Invoice 1092</text>
+  <text x="266" y="222" fill="#736b60" font-family="Georgia, serif" font-size="18">Exact match</text>
+  <text x="108" y="278" fill="#25231f" font-family="Georgia, serif" font-size="22">Vendor 0651</text>
+  <text x="266" y="278" fill="#736b60" font-family="Georgia, serif" font-size="18">Needs context</text>
+  <circle cx="614" cy="160" r="21" fill="none" stroke="#bf5b3d" stroke-width="3"/>
+  <path d="M602 160l8 8 17-20" fill="none" stroke="#bf5b3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="614" cy="216" r="21" fill="none" stroke="#bf5b3d" stroke-width="3"/>
+  <path d="M602 216l8 8 17-20" fill="none" stroke="#bf5b3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="614" cy="272" r="21" fill="#bf5b3d"/>
+  <path d="M614 261v13M614 281v1" stroke="#fbf8f2" stroke-width="3" stroke-linecap="round"/>
+  <text x="84" y="350" fill="#25231f" font-family="Georgia, serif" font-size="34" font-weight="bold">LedgerFlow</text>
+  <text x="84" y="379" fill="#736b60" font-family="Arial, sans-serif" font-size="16" letter-spacing="1.5">EVIDENCE BEFORE ACTION</text>
+</svg>

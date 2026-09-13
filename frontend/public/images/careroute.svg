@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-labelledby="title desc">
+  <title id="title">CareRoute referral coordination illustration</title>
+  <desc id="desc">A routed referral path through validated decision points.</desc>
+  <rect width="800" height="400" fill="#f5f0e8"/>
+  <path d="M0 318H800" stroke="#25231f" stroke-width="2"/>
+  <path d="M96 102C194 102 196 194 292 194S390 102 486 102 584 194 682 194" fill="none" stroke="#8b9383" stroke-width="4" stroke-linecap="round"/>
+  <path d="M96 102C194 102 196 278 292 278S390 194 486 194 584 278 682 278" fill="none" stroke="#bf5b3d" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="96" cy="102" r="26" fill="#25231f"/>
+  <circle cx="292" cy="194" r="26" fill="#fbf8f2" stroke="#25231f" stroke-width="3"/>
+  <circle cx="486" cy="194" r="26" fill="#fbf8f2" stroke="#25231f" stroke-width="3"/>
+  <circle cx="682" cy="278" r="26" fill="#bf5b3d"/>
+  <path d="M84 102h24M96 90v24" stroke="#fbf8f2" stroke-width="3" stroke-linecap="round"/>
+  <path d="M280 194l8 8 17-20M474 194l8 8 17-20" fill="none" stroke="#bf5b3d" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M670 278l8 8 17-20" fill="none" stroke="#fbf8f2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="96" y="55" fill="#736b60" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" letter-spacing="1.5">REFERRAL</text>
+  <text x="292" y="244" fill="#736b60" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" letter-spacing="1.5">VALIDATE</text>
+  <text x="486" y="244" fill="#736b60" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" letter-spacing="1.5">CONFIRM</text>
+  <text x="682" y="329" fill="#736b60" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" letter-spacing="1.5">BOOK</text>
+  <path d="M292 104v43M486 104v43" stroke="#d8cec0" stroke-width="2"/>
+  <rect x="244" y="58" width="96" height="34" rx="17" fill="#e7ddd0"/>
+  <text x="292" y="80" fill="#25231f" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">MODEL PROPOSES</text>
+  <rect x="438" y="58" width="96" height="34" rx="17" fill="#e7ddd0"/>
+  <text x="486" y="80" fill="#25231f" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">HUMAN DECIDES</text>
+  <text x="84" y="374" fill="#25231f" font-family="Georgia, serif" font-size="34" font-weight="bold">CareRoute</text>
+  <text x="344" y="374" fill="#736b60" font-family="Arial, sans-serif" font-size="16" letter-spacing="1.5">SAFE PATHS THROUGH AMBIGUITY</text>
+</svg>
