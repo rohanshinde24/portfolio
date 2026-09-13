@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     name: 'QueryLens',
+    priority: 3,
     description:
       'Full-stack PostgreSQL performance tool with intelligent query optimization.',
     fullDescription:
@@ -26,6 +27,7 @@ const projects = [
   },
   {
     name: 'RetentionPulse',
+    priority: 4,
     description:
       'End-to-end low-latency FastAPI microservices system for customer churn prediction.',
     fullDescription:
@@ -47,6 +49,7 @@ const projects = [
   },
   {
     name: 'FinTrackr',
+    priority: 5,
     description:
       'Full-stack finance tracker with secure REST API and normalized PostgreSQL schema.',
     fullDescription:
@@ -66,6 +69,7 @@ const projects = [
   },
   {
     name: 'GridSweep',
+    priority: 6,
     description:
       'Enterprise-grade grid game with 96% accessibility score and comprehensive testing.',
     fullDescription:
@@ -87,6 +91,7 @@ const projects = [
   },
   {
     name: 'Autonomous Kart Racing Agent',
+    priority: 8,
     description:
       'Reinforcement learning agents trained in Unity for optimal racing.',
     fullDescription:
@@ -98,6 +103,7 @@ const projects = [
   },
   {
     name: 'SmartJournal',
+    priority: 7,
     description:
       'iOS journaling app with on-device sentiment analysis and LLM summarization.',
     fullDescription:
@@ -109,6 +115,7 @@ const projects = [
   },
   {
     name: 'LedgerFlow',
+    priority: 1,
     description:
       'Financial-operations platform where deterministic services govern every agent-proposed action.',
     fullDescription:
@@ -128,6 +135,7 @@ const projects = [
   },
   {
     name: 'CareRoute',
+    priority: 2,
     description:
       'Safety-first referral coordination with bounded model assistance and deterministic workflow control.',
     fullDescription:
@@ -157,15 +165,19 @@ const cardVariants = {
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const orderedProjects = [...projects].sort((a, b) => a.priority - b.priority);
 
   // Get unique categories
-  const categories = ['All', ...new Set(projects.map((p) => p.category))];
+  const categories = [
+    'All',
+    ...new Set(orderedProjects.map((p) => p.category)),
+  ];
 
   // Filter projects by category
   const filteredProjects =
     selectedCategory === 'All'
-      ? projects
-      : projects.filter((p) => p.category === selectedCategory);
+      ? orderedProjects
+      : orderedProjects.filter((p) => p.category === selectedCategory);
 
   return (
     <div className="w-full py-12 sm:py-20 px-4 sm:px-6 bg-surface dark:bg-surface-dark">

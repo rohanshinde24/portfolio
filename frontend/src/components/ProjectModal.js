@@ -9,6 +9,7 @@ export default function ProjectModal({ project, onClose }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          onClick={onClose}
         >
           <motion.div
             className="relative w-full max-w-2xl p-5 sm:p-8 bg-surface dark:bg-surface-dark rounded-lg border border-line dark:border-line-dark overflow-y-auto max-h-[90vh]"
@@ -16,6 +17,7 @@ export default function ProjectModal({ project, onClose }) {
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.8, y: 20 }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            onClick={(event) => event.stopPropagation()}
           >
             <button
               onClick={onClose}
